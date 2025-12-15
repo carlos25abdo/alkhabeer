@@ -860,6 +860,59 @@
           padding: 0.8rem 0;
         }
       }
+      .highlight-section{
+  padding: 2.5rem 0 1.5rem;
+}
+
+.highlight-box{
+  background: rgba(212,175,55,0.10);
+  border: 1px solid rgba(212,175,55,0.35);
+  border-radius: 22px;
+  padding: 1.4rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0 0 30px rgba(212,175,55,0.12);
+}
+
+.highlight-icon{
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(212,175,55,0.18);
+  border: 1px solid rgba(212,175,55,0.25);
+  font-size: 1.6rem;
+  flex: 0 0 auto;
+}
+
+.highlight-kicker{
+  color: var(--accent-gold);
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+.highlight-title{
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1.35;
+  color: #fff;
+}
+
+.highlight-sub{
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+@media(max-width: 700px){
+  .highlight-box{flex-direction: column; text-align: center;}
+  .highlight-title{font-size: 1.2rem;}
+}
+
     </style>
 
     <script>
@@ -895,6 +948,23 @@
       </div>
     </section>
 
+    <section id="highlight" class="highlight-section">
+  <div class="container">
+    <div class="highlight-box">
+      <div class="highlight-icon">🧪</div>
+      <div class="highlight-text">
+        <div class="highlight-kicker">خدمة مميزة</div>
+        <div class="highlight-title">
+          توليد إضافات خرسانية لجميع الخلّاطات الخرسانية المركزية
+        </div>
+        <div class="highlight-sub">
+          نوفّر حلول إضافات خرسانية مخصصة حسب نوع الخلّاطة ومتطلبات المشروع لضمان أفضل أداء وجودة.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
     <!-- About Section -->
     <section id="about">
       <div class="container">
@@ -1158,3 +1228,4 @@
 </body>
 
 </html>
+
