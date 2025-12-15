@@ -6,9 +6,9 @@
   <title>شركة الخبير المعالج | حلول البناء الحديثة</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description"
-    content="شركة الخبير المعالج لاستيراد مواد البناء والمواد الصحية في مصراتة – الرواد في كيماويات البناء، العزل المائي والحراري، والإيبوكسي.">
+    content="شركة الخبير المعالج لاستيراد مواد البناء والصحية في مصراتة – الرواد في كيماويات البناء، العزل المائي، والإيبوكسي.">
 
-  <!-- خطوط عربية فاخرة -->
+  <!-- خطوط عربية -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap"
@@ -18,24 +18,17 @@
     :root {
       /* Palette: Mythical Premium */
       --primary-dark: #020617;
-      /* Almost Black Blue */
       --primary: #0f172a;
-      /* Deep Navy */
       --primary-light: #1e293b;
-      /* Slate */
 
       --accent-gold: #d4af37;
-      /* Metallic Gold */
       --accent-gold-light: #fcd34d;
 
       --action-blue: #3b82f6;
-      /* Vibrant Blue for buttons */
       --action-blue-hover: #2563eb;
 
       --text-main: #f8fafc;
-      /* White-ish */
       --text-muted: #94a3b8;
-      /* Silver Grey */
 
       --bg-gradient: linear-gradient(135deg, #020617 0%, #0f172a 100%);
       --card-bg: rgba(30, 41, 59, 0.4);
@@ -150,7 +143,6 @@
     }
 
     @keyframes float {
-
       0%,
       100% {
         transform: translate(0, 0);
@@ -192,6 +184,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
+      min-width: 260px;
     }
 
     .logo-img {
@@ -204,20 +197,34 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      flex: 0 0 auto;
     }
 
+    /* === تعديل الاسم بجانب اللوقو (مثل الصورة) === */
     .logo-text h1 {
-      font-size: 1.1rem;
-      font-weight: 800;
+      font-size: 1.05rem;
+      font-weight: 900;
       margin: 0;
-      letter-spacing: -0.5px;
       color: #fff;
+      line-height: 1.1;
+      letter-spacing: -0.2px;
     }
 
-    .logo-text span {
-      font-size: 0.8rem;
+    .logo-text .logo-sub {
+      display: block;
+      font-size: 0.82rem;
       color: var(--accent-gold);
-      font-weight: 500;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-top: 2px;
+    }
+
+    .logo-text .logo-sub2 {
+      display: block;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.75);
+      font-weight: 700;
+      margin-top: 2px;
     }
 
     .desktop-nav {
@@ -271,6 +278,7 @@
       border: none;
       transition: var(--transition);
       gap: 0.5rem;
+      white-space: nowrap;
     }
 
     .btn-gold {
@@ -341,7 +349,7 @@
       font-size: 1.1rem;
       color: var(--text-muted);
       margin-bottom: 2.5rem;
-      max-width: 500px;
+      max-width: 520px;
     }
 
     .hero-image-box {
@@ -353,7 +361,6 @@
       height: 80%;
       z-index: 1;
       display: none;
-      /* Mobile */
     }
 
     @media(min-width: 900px) {
@@ -474,6 +481,20 @@
       color: var(--text-muted);
     }
 
+    /* === مهم: إبراز جملة توليد إضافات خرسانية === */
+    .big-highlight {
+      margin: 1rem 0 1rem;
+      padding: 1rem 1.1rem;
+      border-radius: 16px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      background: rgba(212, 175, 55, 0.12);
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.15rem;
+      line-height: 1.4;
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.12);
+    }
+
     /* ===== GALLERY ===== */
     .gallery-grid {
       display: grid;
@@ -487,7 +508,6 @@
       overflow: hidden;
       position: relative;
       aspect-ratio: 1 / 1;
-      /* Square for consistency */
       cursor: pointer;
       border: var(--glass-border);
       box-shadow: var(--shadow-card);
@@ -601,6 +621,24 @@
       }
     }
 
+    @media (max-width: 480px) {
+      .logo-text h1 {
+        font-size: 0.95rem;
+      }
+
+      .logo-text .logo-sub {
+        font-size: 0.75rem;
+      }
+
+      .logo-text .logo-sub2 {
+        font-size: 0.70rem;
+      }
+
+      .big-highlight {
+        font-size: 1.05rem;
+      }
+    }
+
     /* WhatsApp Float */
     .wa-float {
       position: fixed;
@@ -642,12 +680,14 @@
       <div class="container nav-container">
         <div class="logo-box">
           <div class="logo-img">
-            <!-- Logo Placeholders used if file names match, otherwise alt text -->
             <img src="img/alkhabeer logo .png" alt="Logo">
           </div>
+
+          <!-- ✅ الاسم كامل مثل الصورة -->
           <div class="logo-text">
-            <h1>الخبير المعالج</h1>
-            <span>لمواد البناء الحديثة</span>
+            <h1>شركة الخبير المعالج</h1>
+            <span class="logo-sub">لاستيراد مواد البناء والصحية</span>
+            <span class="logo-sub2">ش.م.م</span>
           </div>
         </div>
 
@@ -757,7 +797,6 @@
           display: none;
         }
 
-        /* Safer grid for small phones */
         .grid-3 {
           grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         }
@@ -805,7 +844,6 @@
           gap: 1.5rem;
         }
 
-        /* Force 1 column */
         .container {
           width: 90%;
         }
@@ -820,14 +858,6 @@
 
         header {
           padding: 0.8rem 0;
-        }
-
-        .logo-text h1 {
-          font-size: 1rem;
-        }
-
-        .logo-text span {
-          font-size: 0.75rem;
         }
       }
     </style>
@@ -848,10 +878,10 @@
             مستقبل <span>البناء الحديث</span> <br> يبدأ من هنا
           </h1>
           <p class="hero-sub">
-            نقدم أحدث حلول كيماويات البناء، العزل المائي والحراري، وأنظمة الإيبوكسي في مصراتة.
+            نقدم أحدث حلول كيماويات البناء، العزل المائي، وأنظمة الإيبوكسي في مصراتة.
             منتجات عالمية وماركات موثوقة لضمان استدامة مشاريعكم.
           </p>
-          <div style="display:flex; gap:1rem;">
+          <div style="display:flex; gap:1rem; flex-wrap:wrap;">
             <a href="#products" class="btn btn-gold">استكشف خدماتنا</a>
             <a href="#gallery" class="btn btn-glass">شاهد أعمالنا</a>
           </div>
@@ -904,37 +934,42 @@
         </div>
 
         <div class="grid-3">
-          <!-- Service 1 -->
-          <div class="feature-card">
-            <div class="card-icon">💧</div>
-            <h3 class="card-title">العزل المائي والحراري</h3>
-            <p class="card-txt">أحدث أنظمة العزل للأسطح، الخزانات، والمسابح لحماية المبنى من التسربات والرطوبة.</p>
-          </div>
-          <!-- Service 2 -->
+          <!-- ✅ Service: إضافات الخرسانة (مهم + توضيح كبير) -->
           <div class="feature-card">
             <div class="card-icon">🧪</div>
             <h3 class="card-title">إضافات الخرسانة</h3>
-            <p class="card-txt">محسنات الخرسانة، الملدنات، ومواد المعالجة لرفع كفاءة الباطون المصنعي.</p>
+
+            <div class="big-highlight">
+              توليد إضافات خرسانية لجميع الخلّاطات الخرسانية المركزية
+            </div>
+
+            <p class="card-txt">محسنات الخرسانة، الملدنات، ومواد المعالجة لرفع كفاءة الخرسانة.</p>
           </div>
-          <!-- Service 3 -->
+
+          <!-- ✅ Service: عازل مائي فقط -->
+          <div class="feature-card">
+            <div class="card-icon">💧</div>
+            <h3 class="card-title">عازل مائي فقط</h3>
+            <p class="card-txt">أنظمة عزل مائي للأسطح، الخزانات، والمسابح لحماية المبنى من التسربات والرطوبة.</p>
+          </div>
+
+          <!-- Service: الإيبوكسي والأرضيات -->
           <div class="feature-card">
             <div class="card-icon">✨</div>
             <h3 class="card-title">الإيبوكسي والأرضيات</h3>
             <p class="card-txt">دهانات إيبوكسي ذاتية التسوية للأرضيات الصناعية ومواقف السيارات والمستشفيات.</p>
           </div>
-          <!-- Service 4 -->
-          <div class="feature-card">
-            <div class="card-icon">🚿</div>
-            <h3 class="card-title">المواد الصحية</h3>
-            <p class="card-txt">تشكيلة واسعة من المواد الصحية وإكسسوارات السباكة ذات الجودة العالية.</p>
-          </div>
-          <!-- Service 5 -->
+
+          <!-- ✅ تم حذف المواد الصحية حسب طلبك -->
+
+          <!-- Service: مواد الترميم واللواصق -->
           <div class="feature-card">
             <div class="card-icon">🧱</div>
             <h3 class="card-title">مواد الترميم واللواصق</h3>
             <p class="card-txt">غراء السيراميك، مواد الحقن، ومون الترميم لمعالجة التعشيش والتشققات.</p>
           </div>
-          <!-- Service 6 -->
+
+          <!-- Service: توريد للمشاريع -->
           <div class="feature-card">
             <div class="card-icon">📦</div>
             <h3 class="card-title">توريد للمشاريع</h3>
@@ -955,7 +990,6 @@
 
         <div class="gallery-grid">
 
-          <!-- Gallery Item 2 -->
           <div class="gallery-item">
             <img src="img/IMG-20251214-WA0033.jpg" loading="lazy" alt="YapSeal Flex 106">
             <div class="gallery-overlay">
@@ -964,7 +998,7 @@
               </div>
             </div>
           </div>
-          <!-- Gallery Item 3 -->
+
           <div class="gallery-item">
             <img src="img/IMG-20251214-WA0034.jpg" loading="lazy" alt="YapSeal Liquid">
             <div class="gallery-overlay">
@@ -973,7 +1007,7 @@
               </div>
             </div>
           </div>
-          <!-- Gallery Item 4 - Restored -->
+
           <div class="gallery-item">
             <img src="img/IMG-20251214-WA0035.jpg" loading="lazy" alt="مستندات المكتب">
             <div class="gallery-overlay">
@@ -982,7 +1016,7 @@
               </div>
             </div>
           </div>
-          <!-- Gallery Item 5 -->
+
           <div class="gallery-item">
             <img src="img/IMG-20251214-WA0036.jpg" loading="lazy" alt="NP Plus">
             <div class="gallery-overlay">
@@ -991,7 +1025,7 @@
               </div>
             </div>
           </div>
-          <!-- Gallery Item 6 -->
+
           <div class="gallery-item">
             <img src="img/IMG-20251214-WA0037.jpg" loading="lazy" alt="خزانات توريد">
             <div class="gallery-overlay">
@@ -1000,7 +1034,7 @@
               </div>
             </div>
           </div>
-          <!-- Gallery Item 7 -->
+
           <div class="gallery-item">
             <img src="img/IMG-20251214-WA0038.jpg" loading="lazy" alt="شحن الحاويات">
             <div class="gallery-overlay">
@@ -1009,7 +1043,7 @@
               </div>
             </div>
           </div>
-          <!-- Gallery Item 8 -->
+
           <div class="gallery-item">
             <img src="img/IMG-20251214-WA0039.jpg" loading="lazy" alt="مخزون الشركة">
             <div class="gallery-overlay">
@@ -1018,7 +1052,7 @@
               </div>
             </div>
           </div>
-          <!-- Gallery Item 9 -->
+
           <div class="gallery-item">
             <img src="img/IMG-20251214-WA0040.jpg" loading="lazy" alt="منصة التحميل">
             <div class="gallery-overlay">
@@ -1027,7 +1061,7 @@
               </div>
             </div>
           </div>
-          <!-- Gallery Item 10 -->
+
           <div class="gallery-item">
             <img src="img/IMG-20251214-WA0041.jpg" loading="lazy" alt="مواد العزل">
             <div class="gallery-overlay">
@@ -1036,7 +1070,7 @@
               </div>
             </div>
           </div>
-          <!-- Gallery Item 11 -->
+
           <div class="gallery-item">
             <img src="img/IMG-20251214-WA0042.jpg" loading="lazy" alt="فريق العمل">
             <div class="gallery-overlay">
@@ -1045,6 +1079,7 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -1081,14 +1116,13 @@
               </div>
             </div>
 
-            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap:wrap;">
               <a href="https://wa.me/218912200977" class="btn btn-gold">راسلنا واتساب</a>
               <a href="https://www.facebook.com/abdulati74" target="_blank" class="btn btn-glass">فيسبوك ↗</a>
             </div>
           </div>
 
           <div class="contact-map">
-            <!-- Google Maps Embed -->
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3369.7202419304035!2d15.059917625158157!3d32.37304957383508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13a14d6bd86452bb%3A0x1755b13a93cc91a2!2z2LTYsdmD2Kkg2KfZhNiu2KjZitixINin2YTZhdi52KfZhNis!5e0!3m2!1sar!2sus!4v1765235020083!5m2!1sar!2sus"
               width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -1107,10 +1141,8 @@
   </div>
 
   <script>
-    // Update Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Sticky Header Effect
     window.addEventListener('scroll', () => {
       const header = document.querySelector('header');
       if (window.scrollY > 50) {
